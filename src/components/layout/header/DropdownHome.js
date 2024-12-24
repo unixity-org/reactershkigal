@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const DropdownHome = ({ dropdownItems }) => {
   return (
-    <div className="headerarea__submenu headerarea__mega__menu__wrapper headerarea__mega__menu__grid__5">
+    <div /*className="headerarea__submenu headerarea__mega__menu__wrapper headerarea__mega__menu__grid__5"*/>
       <div className="row">
         {dropdownItems?.map(({ img, path, onepage, multipage }, idx) => (
           <div key={idx} className="col-3 headerarea__mega__menu__single__wrap">
