@@ -36,312 +36,312 @@ const Navbar = () => {
   const navItemsRaw = [
     {
       name: "HOME",
-      icon: isOnepage ? false : true,
+      // icon: isOnepage ? false : true,
       path: isOnepage ? "#" : "/",
       dropdown: null,
       position: "static",
-      dropdownItems: [
-        {
-          img: homeImage1,
-          path: "/",
-          onepage: {
-            name: "Business (One page)",
-            path: "/index-onepage",
-          },
-          multipage: {
-            name: "Business (Multi Page)",
-            path: "/",
-          },
-        },
-        {
-          img: homeImage2,
-          path: "/home-2",
-          onepage: {
-            name: "Marketing (One page)",
-            path: "/home-2-onepage",
-          },
-          multipage: {
-            name: "Marketing (Multi Page)",
-            path: "/home-2",
-          },
-        },
-        {
-          img: homeImage3,
-          path: "/home-3",
-          onepage: {
-            name: "Corporate (One page)",
-            path: "/home-3-onepage",
-          },
-          multipage: {
-            name: "Corporate (Multi Page)",
-            path: "/home-3",
-          },
-        },
-        {
-          img: homeImage4,
-          path: "/home-4",
-          onepage: {
-            name: "Digital (One page)",
-            path: "/home-4-onepage",
-          },
-          multipage: {
-            name: "Digital (Multi Page)",
-            path: "/home-4",
-          },
-        },
-        {
-          img: homeImage5,
-          path: "/home-5",
-          onepage: {
-            name: "Finance (One page)",
-            path: "/home-5-onepage",
-          },
-          multipage: {
-            name: "Finance (Multi Page)",
-            path: "/home-5",
-          },
-        },
-        {
-          img: homeImage6,
-          path: "/home-6",
-          onepage: {
-            name: "Insurance (One page)",
-            path: "/home-6-onepage",
-          },
-          multipage: {
-            name: "Insurance (Multi Page)",
-            path: "/home-6",
-          },
-        },
-        {
-          img: homeImage7,
-          path: "/home-7",
-          onepage: {
-            name: "HR (One page)",
-            path: "/home-7-onepage",
-          },
-          multipage: {
-            name: "HR (Multi Page)",
-            path: "/home-7",
-          },
-        },
-        {
-          img: homeImage8,
-          path: "/home-8",
-          onepage: {
-            name: "Creative Agency (One)",
-            path: "/home-8-onepage",
-          },
-          multipage: {
-            name: "Creative Agency (Multi)",
-            path: "/home-8",
-          },
-        },
-        {
-          img: homeImage9,
-          path: "/home-9",
-          onepage: {
-            name: "eCommerce (One page)",
-            path: "/home-9-onepage",
-          },
-          multipage: {
-            name: "eCommerce (Multi Page)",
-            path: "/home-9",
-          },
-        },
-        {
-          img: homeImage10,
-          path: "/home-10",
-          onepage: {
-            name: "Personal Portfolio (One)",
-            path: "/home-10-onepage",
-          },
-          multipage: {
-            name: "Personal Portfolio (Multi)",
-            path: "/home-10",
-          },
-        },
-        {
-          img: homeImage11,
-          path: "/home-11",
-          onepage: {
-            name: "SEO Agency (One page)",
-            path: "/home-11-onepage",
-          },
-          multipage: {
-            name: "SEO Agency (Multi Page)",
-            path: "/home-11",
-          },
-        },
-        {
-          img: homeImage12,
-          path: "/home-12",
-          onepage: {
-            name: "Creative Portfolio (One)",
-            path: "/home-12-onepage",
-          },
-          multipage: {
-            name: "Creative Portfolio (Multi)",
-            path: "/home-12",
-          },
-        },
-        {
-          img: homeImage13,
-          path: "/home-13",
-          onepage: {
-            name: "Event Conference (One)",
-            path: "/home-13-onepage",
-          },
-          multipage: {
-            name: "Event Conference (Multi)",
-            path: "/home-13",
-          },
-        },
-        {
-          img: homeImage14,
-          path: "/home-14",
-          onepage: {
-            name: "Sass App (One page)",
-            path: "/home-14-onepage",
-          },
-          multipage: {
-            name: "Sass App (Multi Page)",
-            path: "/home-14",
-          },
-        },
-        {
-          img: homeImage15,
-          path: "/home-15",
-          onepage: {
-            name: "Freelancer (One page)",
-            path: "/home-15-onepage",
-          },
-          multipage: {
-            name: "Freelancer (Multi Page)",
-            path: "/home-15",
-          },
-        },
-        {
-          img: homeImage16,
-          path: "/home-16",
-          onepage: {
-            name: "Technology (One page)",
-            path: "/home-16-onepage",
-          },
-          multipage: {
-            name: "Technology (Multi Page)",
-            path: "/home-16",
-          },
-        },
-        {
-          img: homeImage17,
-          path: "/home-17",
-          onepage: {
-            name: "Web Agency (One page)",
-            path: "/home-17-onepage",
-          },
-          multipage: {
-            name: "Web Agency (Multi Page)",
-            path: "/home-17",
-          },
-        },
-        {
-          img: homeImage18,
-          path: "/home-18",
-          onepage: {
-            name: "Travel Agency (One)",
-            path: "/home-18-onepage",
-          },
-          multipage: {
-            name: "Travel Agency (Multi)",
-            path: "/home-18",
-          },
-        },
-        {
-          img: homeImage19,
-          path: "/home-19",
-          onepage: {
-            name: "International (One page)",
-            path: "/home-19-onepage",
-          },
-          multipage: {
-            name: "International (Multi Page)",
-            path: "/home-19",
-          },
-        },
-        {
-          img: homeImage20,
-          path: "/home-20",
-          onepage: {
-            name: "Start Up (One page)",
-            path: "/home-20-onepage",
-          },
-          multipage: {
-            name: "Start Up (Multi Page)",
-            path: "/home-20",
-          },
-        },
-        {
-          img: comingImage1,
-          path: "#",
-          onepage: {
-            name: "Coming 1 (One page)",
-            path: "#",
-          },
-          multipage: {
-            name: "Coming 1 (Multi Page)",
-            path: "#",
-          },
-        },
-        {
-          img: comingImage2,
-          path: "#",
-          onepage: {
-            name: "Coming 2 (One page)",
-            path: "#",
-          },
-          multipage: {
-            name: "Coming 2 (Multi Page)",
-            path: "#",
-          },
-        },
-        {
-          img: comingImage3,
-          path: "#",
-          onepage: {
-            name: "Coming 3 (One page)",
-            path: "#",
-          },
-          multipage: {
-            name: "Coming 3 (Multi Page)",
-            path: "#",
-          },
-        },
-        {
-          img: comingImage4,
-          path: "#",
-          onepage: {
-            name: "Coming 4 (One page)",
-            path: "#",
-          },
-          multipage: {
-            name: "Coming 4 (Multi Page)",
-            path: "#",
-          },
-        },
-        {
-          img: comingImage5,
-          path: "#",
-          onepage: {
-            name: "Coming 5 (One page)",
-            path: "#",
-          },
-          multipage: {
-            name: "Coming 5 (Multi Page)",
-            path: "#",
-          },
-        },
-      ],
+      // dropdownItems: [
+      //   {
+      //     img: homeImage1,
+      //     path: "/",
+      //     onepage: {
+      //       name: "Business (One page)",
+      //       path: "/index-onepage",
+      //     },
+      //     multipage: {
+      //       name: "Business (Multi Page)",
+      //       path: "/",
+      //     },
+      //   },
+      //   {
+      //     img: homeImage2,
+      //     path: "/home-2",
+      //     onepage: {
+      //       name: "Marketing (One page)",
+      //       path: "/home-2-onepage",
+      //     },
+      //     multipage: {
+      //       name: "Marketing (Multi Page)",
+      //       path: "/home-2",
+      //     },
+      //   },
+      //   {
+      //     img: homeImage3,
+      //     path: "/home-3",
+      //     onepage: {
+      //       name: "Corporate (One page)",
+      //       path: "/home-3-onepage",
+      //     },
+      //     multipage: {
+      //       name: "Corporate (Multi Page)",
+      //       path: "/home-3",
+      //     },
+      //   },
+      //   {
+      //     img: homeImage4,
+      //     path: "/home-4",
+      //     onepage: {
+      //       name: "Digital (One page)",
+      //       path: "/home-4-onepage",
+      //     },
+      //     multipage: {
+      //       name: "Digital (Multi Page)",
+      //       path: "/home-4",
+      //     },
+      //   },
+      //   {
+      //     img: homeImage5,
+      //     path: "/home-5",
+      //     onepage: {
+      //       name: "Finance (One page)",
+      //       path: "/home-5-onepage",
+      //     },
+      //     multipage: {
+      //       name: "Finance (Multi Page)",
+      //       path: "/home-5",
+      //     },
+      //   },
+      //   {
+      //     img: homeImage6,
+      //     path: "/home-6",
+      //     onepage: {
+      //       name: "Insurance (One page)",
+      //       path: "/home-6-onepage",
+      //     },
+      //     multipage: {
+      //       name: "Insurance (Multi Page)",
+      //       path: "/home-6",
+      //     },
+      //   },
+      //   {
+      //     img: homeImage7,
+      //     path: "/home-7",
+      //     onepage: {
+      //       name: "HR (One page)",
+      //       path: "/home-7-onepage",
+      //     },
+      //     multipage: {
+      //       name: "HR (Multi Page)",
+      //       path: "/home-7",
+      //     },
+      //   },
+      //   {
+      //     img: homeImage8,
+      //     path: "/home-8",
+      //     onepage: {
+      //       name: "Creative Agency (One)",
+      //       path: "/home-8-onepage",
+      //     },
+      //     multipage: {
+      //       name: "Creative Agency (Multi)",
+      //       path: "/home-8",
+      //     },
+      //   },
+      //   {
+      //     img: homeImage9,
+      //     path: "/home-9",
+      //     onepage: {
+      //       name: "eCommerce (One page)",
+      //       path: "/home-9-onepage",
+      //     },
+      //     multipage: {
+      //       name: "eCommerce (Multi Page)",
+      //       path: "/home-9",
+      //     },
+      //   },
+      //   {
+      //     img: homeImage10,
+      //     path: "/home-10",
+      //     onepage: {
+      //       name: "Personal Portfolio (One)",
+      //       path: "/home-10-onepage",
+      //     },
+      //     multipage: {
+      //       name: "Personal Portfolio (Multi)",
+      //       path: "/home-10",
+      //     },
+      //   },
+      //   {
+      //     img: homeImage11,
+      //     path: "/home-11",
+      //     onepage: {
+      //       name: "SEO Agency (One page)",
+      //       path: "/home-11-onepage",
+      //     },
+      //     multipage: {
+      //       name: "SEO Agency (Multi Page)",
+      //       path: "/home-11",
+      //     },
+      //   },
+      //   {
+      //     img: homeImage12,
+      //     path: "/home-12",
+      //     onepage: {
+      //       name: "Creative Portfolio (One)",
+      //       path: "/home-12-onepage",
+      //     },
+      //     multipage: {
+      //       name: "Creative Portfolio (Multi)",
+      //       path: "/home-12",
+      //     },
+      //   },
+      //   {
+      //     img: homeImage13,
+      //     path: "/home-13",
+      //     onepage: {
+      //       name: "Event Conference (One)",
+      //       path: "/home-13-onepage",
+      //     },
+      //     multipage: {
+      //       name: "Event Conference (Multi)",
+      //       path: "/home-13",
+      //     },
+      //   },
+      //   {
+      //     img: homeImage14,
+      //     path: "/home-14",
+      //     onepage: {
+      //       name: "Sass App (One page)",
+      //       path: "/home-14-onepage",
+      //     },
+      //     multipage: {
+      //       name: "Sass App (Multi Page)",
+      //       path: "/home-14",
+      //     },
+      //   },
+      //   {
+      //     img: homeImage15,
+      //     path: "/home-15",
+      //     onepage: {
+      //       name: "Freelancer (One page)",
+      //       path: "/home-15-onepage",
+      //     },
+      //     multipage: {
+      //       name: "Freelancer (Multi Page)",
+      //       path: "/home-15",
+      //     },
+      //   },
+      //   {
+      //     img: homeImage16,
+      //     path: "/home-16",
+      //     onepage: {
+      //       name: "Technology (One page)",
+      //       path: "/home-16-onepage",
+      //     },
+      //     multipage: {
+      //       name: "Technology (Multi Page)",
+      //       path: "/home-16",
+      //     },
+      //   },
+      //   {
+      //     img: homeImage17,
+      //     path: "/home-17",
+      //     onepage: {
+      //       name: "Web Agency (One page)",
+      //       path: "/home-17-onepage",
+      //     },
+      //     multipage: {
+      //       name: "Web Agency (Multi Page)",
+      //       path: "/home-17",
+      //     },
+      //   },
+      //   {
+      //     img: homeImage18,
+      //     path: "/home-18",
+      //     onepage: {
+      //       name: "Travel Agency (One)",
+      //       path: "/home-18-onepage",
+      //     },
+      //     multipage: {
+      //       name: "Travel Agency (Multi)",
+      //       path: "/home-18",
+      //     },
+      //   },
+      //   {
+      //     img: homeImage19,
+      //     path: "/home-19",
+      //     onepage: {
+      //       name: "International (One page)",
+      //       path: "/home-19-onepage",
+      //     },
+      //     multipage: {
+      //       name: "International (Multi Page)",
+      //       path: "/home-19",
+      //     },
+      //   },
+      //   {
+      //     img: homeImage20,
+      //     path: "/home-20",
+      //     onepage: {
+      //       name: "Start Up (One page)",
+      //       path: "/home-20-onepage",
+      //     },
+      //     multipage: {
+      //       name: "Start Up (Multi Page)",
+      //       path: "/home-20",
+      //     },
+      //   },
+      //   {
+      //     img: comingImage1,
+      //     path: "#",
+      //     onepage: {
+      //       name: "Coming 1 (One page)",
+      //       path: "#",
+      //     },
+      //     multipage: {
+      //       name: "Coming 1 (Multi Page)",
+      //       path: "#",
+      //     },
+      //   },
+      //   {
+      //     img: comingImage2,
+      //     path: "#",
+      //     onepage: {
+      //       name: "Coming 2 (One page)",
+      //       path: "#",
+      //     },
+      //     multipage: {
+      //       name: "Coming 2 (Multi Page)",
+      //       path: "#",
+      //     },
+      //   },
+      //   {
+      //     img: comingImage3,
+      //     path: "#",
+      //     onepage: {
+      //       name: "Coming 3 (One page)",
+      //       path: "#",
+      //     },
+      //     multipage: {
+      //       name: "Coming 3 (Multi Page)",
+      //       path: "#",
+      //     },
+      //   },
+      //   {
+      //     img: comingImage4,
+      //     path: "#",
+      //     onepage: {
+      //       name: "Coming 4 (One page)",
+      //       path: "#",
+      //     },
+      //     multipage: {
+      //       name: "Coming 4 (Multi Page)",
+      //       path: "#",
+      //     },
+      //   },
+      //   {
+      //     img: comingImage5,
+      //     path: "#",
+      //     onepage: {
+      //       name: "Coming 5 (One page)",
+      //       path: "#",
+      //     },
+      //     multipage: {
+      //       name: "Coming 5 (Multi Page)",
+      //       path: "#",
+      //     },
+      //   },
+      // ],
     },
     {
       name:
