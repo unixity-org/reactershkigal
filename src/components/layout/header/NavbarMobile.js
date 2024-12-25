@@ -16,14 +16,14 @@ const NavbarMobile = () => {
     {
       name: isOnepage ? "BLOG" : "Blog",
       // toggler: false,
-      path: isOnepage ? "#" : "/",
+      path: isOnepage ? "#" : "/blogs",
       // dropdown: isOnepage ? false : true,
       // nestedDropdown: isOnepage ? false : true,
     },
     {
       name: isOnepage ? "ABOUT" : "About",
       // toggler: false,
-      path: isOnepage ? "#" : "/",
+      path: isOnepage ? "#" : "/about",
       // dropdown: isOnepage ? false : true,
       // nestedDropdown: isOnepage ? false : true,
     },

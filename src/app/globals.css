@@ -2305,7 +2305,7 @@ button.default__button {
 }
 .headerarea__cart__dropdown__wrapper {
   position: absolute;
-  width: 350px;
+  width: 375px;
   max-height: 700px;
   padding: 20px;
   border-bottom: 3px solid var(--borderColor);

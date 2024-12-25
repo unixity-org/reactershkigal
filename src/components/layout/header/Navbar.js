@@ -15,14 +15,14 @@ const Navbar = () => {
     {
       name: "Blog",
       // icon: isOnepage ? false : true,
-      path: isOnepage ? "#" : "/",
+      path: isOnepage ? "#" : "/blog",
       dropdown: null,
       position: "static",
     },
     {
       name: "About",
       // icon: isOnepage ? false : true,
-      path: isOnepage ? "#" : "/",
+      path: isOnepage ? "#" : "/about",
       dropdown: null,
       position: "static",
     },
