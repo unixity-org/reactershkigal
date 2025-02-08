@@ -1,4 +1,4 @@
-const BASE_URL = "http://localhost:5299/api/Blogs/GetAllBlog";
+const BASE_URL = "https://localhost:7001/api/Blogs/GetAllBlog";
 
 export const getAllBlogs = async () => {
   try {
