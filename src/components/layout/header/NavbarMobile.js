@@ -14,7 +14,7 @@ const NavbarMobile = () => {
       // nestedDropdown: isOnepage ? false : true,
     },
     {
-      name: isOnepage ? "BLOG" : "Blog",
+      name: isOnepage ? "BLOGs" : "Blogs",
       // toggler: false,
       path: isOnepage ? "#" : "/blogs",
       // dropdown: isOnepage ? false : true,

@@ -13,9 +13,9 @@ const Navbar = () => {
       position: "static",
     },
     {
-      name: "Blog",
+      name: "Blogs",
       // icon: isOnepage ? false : true,
-      path: isOnepage ? "#" : "/blog",
+      path: isOnepage ? "#" : "/blogs",
       dropdown: null,
       position: "static",
     },
