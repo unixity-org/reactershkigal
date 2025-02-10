@@ -2,11 +2,13 @@
   "name": "bastun",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "test": "node test.js"
   },
   "dependencies": {
     "@popperjs/core": "^2.11.8",
@@ -19,7 +21,8 @@
     "sharp": "^0.33.5",
     "sweetalert2": "^11.12.4",
     "swiper": "^11.1.9",
-    "vanilla-tilt": "^1.8.1"
+    "vanilla-tilt": "^1.8.1",
+    "node-fetch": "^3.3.2"
   },
   "devDependencies": {
     "eslint": "^8",
