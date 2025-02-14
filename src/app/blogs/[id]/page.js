@@ -4,17 +4,24 @@ import ThemeController from "@/components/shared/others/ThemeController";
 import PageWrapper from "@/components/shared/wrappers/PageWrapper";
 import getAllBlogs from "@/libs/getAllBlogs";
 import { notFound } from "next/navigation";
+import { getBlogById } from "@/services/blogDetailService";
 export const metadata = {
   title: "Blogs Details | Bastun- Business Consulting Next Js Template",
   description: "Blogs Details | Bastun- Business Consulting Next Js Template",
 };
 const blogs = getAllBlogs();
-export default function BlogsDetails({ params }) {
+export default async function BlogsDetails({ params }) {
   const { id } = params;
-  const isExistBlog = blogs?.find(({ id: id1 }) => id1 === parseInt(id));
-  if (!isExistBlog) {
+  console.log('Blog Title:', id);  
+  // const isExistBlog = blogs?.find(({ id: id1 }) => id1 === parseInt(id));
+  const blogPost = await getBlogById(id);
+  console.log('Blog Post', blogPost);
+  if (!blogPost || blogPost === null) {
     notFound();
   }
+  // if (!isExistBlog) {
+  //   notFound();
+  // }
   return (
     <PageWrapper
       headerStyle={3}
@@ -23,7 +30,7 @@ export default function BlogsDetails({ params }) {
       footerBg={"black"}
     >
       <ThemeController />
-      <BlogDetailsMain />
+      <BlogDetailsMain post={blogPost} />
     </PageWrapper>
   );
 }

@@ -6288,6 +6288,11 @@ button.default__button {
   border-radius: var(--borderRadius);
   margin-bottom: 30px;
 }
+.blog__4__text p {
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 @media (min-width: 992px) and (max-width: 1365px) {
   .blog__4__single {
     padding: 20px;

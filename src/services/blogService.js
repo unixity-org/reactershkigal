@@ -7,13 +7,10 @@ export const getAllBlogs = async () => {
       throw new Error(`خطای HTTP! وضعیت: ${response.status}`);
     }
     const data = await response.json();
-
-    if (!Array.isArray(data)) {
-      return [];
-    }
-
-    return data;
+    console.log(data); 
+    return data; 
   } catch (error) {
-    return [];
+    console.error("❌ خطا در دریافت مقالات:", error.message);
+    return []; 
   }
 };

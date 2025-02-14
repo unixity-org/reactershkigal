@@ -2,27 +2,24 @@
   "name": "bastun",
   "version": "0.1.0",
   "private": true,
-  "type": "module",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "test": "node test.js"
+    "lint": "next lint"
   },
   "dependencies": {
     "@popperjs/core": "^2.11.8",
     "aos": "^3.0.0-beta.6",
     "glightbox": "^3.3.0",
-    "next": "14.2.5",
+    "next": "^14.2.23",
     "nodemailer": "^6.9.15",
     "react": "^18.3.1",
     "react-dom": "^18",
     "sharp": "^0.33.5",
-    "sweetalert2": "^11.12.4",
+    "sweetalert2": "^11.6.13",
     "swiper": "^11.1.9",
-    "vanilla-tilt": "^1.8.1",
-    "node-fetch": "^3.3.2"
+    "vanilla-tilt": "^1.8.1"
   },
   "devDependencies": {
     "eslint": "^8",

@@ -5,14 +5,15 @@ import getAllBlogs from "@/libs/getAllBlogs";
 import CommonContext from "@/providers/CommonContext";
 import Image from "next/image";
 import { useParams } from "next/navigation";
-import React from "react";
+import React, { use, useEffect } from "react";
 
-const BlogDetailsPrimary = () => {
-  const { id: currentId } = useParams();
+const BlogDetailsPrimary = ({ post }) => {
+  // const { id: currentId } = useParams();
 
-  const blogs = getAllBlogs();
-  const blog = blogs.find(({ id }) => id === parseInt(currentId));
-  const { title, img, publishDate } = blog;
+  // const blogs = getAllBlogs();
+  // const blog = blogs.find(({ id }) => id === parseInt(currentId));
+  const { title, img, publishDate, description } = post;
+
   const {
     searchString,
     searchedItems,
@@ -24,7 +25,8 @@ const BlogDetailsPrimary = () => {
     closeSearch,
     isShowQuickSearchResult,
     setIsShowQuickSearchResult,
-  } = useSearch(blogs, "/blogs");
+  } = useSearch([], "/search-result");
+
   return (
     <div className="blog__details sp_top_140 sp_bottom_140">
       <div className="container">
@@ -57,10 +59,12 @@ const BlogDetailsPrimary = () => {
                 data-aos-duration="1500"
               >
                 <div className="blog__details__img">
-                  <Image src={img} alt="" placeholder="blur" />
+                  <Image src='' alt=""
+                  // placeholder="blur" 
+                  />
                 </div>
                 <div className="blog__details__small__button">
-                  <span>{publishDate}</span>
+                  <span></span>
                 </div>
               </div>
 
@@ -77,192 +81,10 @@ const BlogDetailsPrimary = () => {
                 data-aos-duration="1500"
               >
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                  irure dolor in reprehenderit in voluptate velit esse cillum
-                  dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                  cupidatat non proident, sunt in culpa qui officia deserunt
-                  mollit anim id est laborum.
+                  {description}
                 </p>
               </div>
 
-              <div
-                className="blog__details__list"
-                data-aos="fade-up"
-                data-aos-duration="1500"
-              >
-                <ul>
-                  <li>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,{" "}
-                  </li>
-                  <li>
-                    Sed do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua.{" "}
-                  </li>
-                  <li>
-                    Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                    laboris nisi{" "}
-                  </li>
-                  <li>
-                    Commodo consequat. Duis aute irure dolor in reprehenderit in{" "}
-                  </li>
-                  <li>
-                    Voluptate velit esse cillum dolore eu fugiat nulla pariatur.{" "}
-                  </li>
-                </ul>
-              </div>
-
-              <div
-                className="blog__details__text"
-                data-aos="fade-up"
-                data-aos-duration="1500"
-              >
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                  irure dolor in reprehenderit in voluptate velit esse cillum
-                  dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                  cupidatat non proident, sunt in culpa qui officia deserunt
-                  mollit anim id est laborum.
-                </p>
-              </div>
-
-              <div
-                className="blog__details__heading"
-                data-aos="fade-up"
-                data-aos-duration="1500"
-              >
-                <h4>
-                  The ROI of Business Consulting: Why {"It's"} Worth the
-                  Investment
-                </h4>
-              </div>
-
-              <div
-                className="blog__details__text"
-                data-aos="fade-up"
-                data-aos-duration="1500"
-              >
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                  irure dolor in reprehenderit in voluptate velit esse cillum
-                  dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                  cupidatat non proident, sunt in culpa qui officia deserunt
-                  mollit anim id est laborum.
-                </p>
-              </div>
-
-              <div
-                className="blog__details__text"
-                data-aos="fade-up"
-                data-aos-duration="1500"
-              >
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                  irure dolor in reprehenderit in voluptate velit esse cillum
-                  dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                  cupidatat non proident, sunt in culpa qui officia deserunt
-                  mollit anim id est laborum.
-                </p>
-              </div>
-
-              <div
-                className="blog__details__text blog__details__text--2"
-                data-aos="fade-up"
-                data-aos-duration="1500"
-              >
-                <p>
-                  “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation”.
-                </p>
-              </div>
-
-              <div
-                className="blog__details__text"
-                data-aos="fade-up"
-                data-aos-duration="1500"
-              >
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                  irure dolor in reprehenderit in voluptate velit esse cillum
-                  dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                  cupidatat non proident, sunt in culpa qui officia deserunt
-                  mollit anim id est laborum.
-                </p>
-              </div>
-
-              <div
-                className="blog__details__text"
-                data-aos="fade-up"
-                data-aos-duration="1500"
-              >
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                  irure dolor in reprehenderit in voluptate velit esse cillum
-                  dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                  cupidatat non proident, sunt in culpa qui officia deserunt
-                  mollit anim id est laborum.
-                </p>
-              </div>
-
-              <div
-                className="blog__details__list"
-                data-aos="fade-up"
-                data-aos-duration="1500"
-              >
-                <ul>
-                  <li>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,{" "}
-                  </li>
-                  <li>
-                    Sed do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua.{" "}
-                  </li>
-                  <li>
-                    Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                    laboris nisi{" "}
-                  </li>
-                  <li>
-                    Commodo consequat. Duis aute irure dolor in reprehenderit in{" "}
-                  </li>
-                  <li>
-                    Voluptate velit esse cillum dolore eu fugiat nulla pariatur.{" "}
-                  </li>
-                </ul>
-              </div>
-              <div
-                className="blog__details__text"
-                data-aos="fade-up"
-                data-aos-duration="1500"
-              >
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                  irure dolor in reprehenderit in voluptate velit esse cillum
-                  dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                  cupidatat non proident, sunt in culpa qui officia deserunt
-                  mollit anim id est laborum.
-                </p>
-              </div>
 
               <div
                 className="blog__details__social__icon"
