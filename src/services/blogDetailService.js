@@ -1,6 +1,6 @@
 export const getBlogById = async (id) => {
   try {
-    const response = await fetch(`http://localhost:5299/api/Blogs/GetPostById?id=${id}`);
+    const response = await fetch(`http://185.18.214.46:1234/api/Blogs/GetPostById?id=${id}`);
 
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
