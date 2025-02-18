@@ -1,6 +1,7 @@
 import ButtonPrimary from "../buttons/ButtonPrimary";
 import Link from "next/link";
 import Image from "next/image";
+//moz
 
 const BlogCard3 = ({ blog, blogsType, bg }) => {
   const { blogId, title, description, createdAt } = blog;

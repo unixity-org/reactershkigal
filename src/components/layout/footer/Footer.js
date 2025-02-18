@@ -42,13 +42,13 @@ const Footer = ({ style, footerBg, copyright }) => {
             : {}
         }
       >
-        {!style ? (
+        {/* {!style ? (
           <FooterBadge />
         ) : style === 3 ? (
           <Brands4 type={"footer"} />
         ) : (
           ""
-        )}
+        )} */}
 
         <div className="container">
           {style === 4 ? (
