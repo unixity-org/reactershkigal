@@ -1,19 +1,18 @@
 "use client";
 import BlogSidebar from "@/components/shared/sidebars/BlogSidebar";
 import useSearch from "@/hooks/useSearch";
-import getAllBlogs from "@/libs/getAllBlogs";
 import CommonContext from "@/providers/CommonContext";
 import Image from "next/image";
-import { useParams } from "next/navigation";
 import React, { use, useEffect } from "react";
 
 const BlogDetailsPrimary = ({ post }) => {
-  // const { id: currentId } = useParams();
+  const { title, imageAddress, createdAt, description } = post;
 
-  // const blogs = getAllBlogs();
-  // const blog = blogs.find(({ id }) => id === parseInt(currentId));
-  const { title, img, publishDate, description } = post;
+  const baseUrl = "http://185.18.214.46:1234"; 
 
+  const fullImageUrl = imageAddress ? `${baseUrl}${imageAddress}` : null;
+
+  const formattedDate = new Date(createdAt).toLocaleDateString("en-US"); 
   const {
     searchString,
     searchedItems,
@@ -59,12 +58,25 @@ const BlogDetailsPrimary = ({ post }) => {
                 data-aos-duration="1500"
               >
                 <div className="blog__details__img">
-                  <Image src='' alt=""
-                  // placeholder="blur" 
-                  />
+                  {fullImageUrl ? (
+                    <Image
+                      src={fullImageUrl}
+                      alt={title || "Blog Image"}
+                      width={800} 
+                      height={450} 
+                      layout="responsive" 
+                      objectFit="cover" 
+                      className="rounded-lg"
+                      priority
+                    />
+                  ) : (
+                    <div className="image-placeholder">
+                      <p>No image available</p>
+                    </div>
+                  )}
                 </div>
                 <div className="blog__details__small__button">
-                  <span></span>
+                  <span>{formattedDate}</span> 
                 </div>
               </div>
 
@@ -80,11 +92,8 @@ const BlogDetailsPrimary = ({ post }) => {
                 data-aos="fade-up"
                 data-aos-duration="1500"
               >
-                <p>
-                  {description}
-                </p>
+                <p>{description}</p>
               </div>
-
 
               <div
                 className="blog__details__social__icon"
