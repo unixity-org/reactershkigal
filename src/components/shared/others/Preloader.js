@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import React, { useEffect } from "react";
-import preImage from "@/assets/img/pre.png";
+import preImage from "@/assets/img/logo/logo.png";
 
 const Preloader = () => {
   useEffect(() => {

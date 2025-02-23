@@ -1,7 +1,7 @@
 "use client";
 import herobannerBgImage1 from "@/assets/img/herobaner/herobanner__bg.png";
-import herobannerImage1 from "@/assets/img/herobaner/front__img__ecommerce1.png";
-import herobannerImage2 from "@/assets/img/herobaner/front__img__ecommerce2.png";
+import herobannerImage1 from "@/assets/img/herobaner/Electric_guitar_No_1.webp";
+import herobannerImage2 from "@/assets/img/herobaner/Electric_guitar_No_2.webp";
 import herobannerImage3 from "@/assets/img/herobaner/front__img__ecommerce3.png";
 import herobannerVectorImage1 from "@/assets/img/herobaner/vector__1.png";
 import herobannerVectorImage4 from "@/assets/img/herobaner/vector__4.png";
@@ -12,19 +12,19 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 const Hero9 = () => {
   const slides = [
-    {
-      id: 1,
-      title: (
-        <>
-          Grab Super <span className="text__gradient">Offer</span>
-        </>
-      ),
-      tag: "eCommerce Solution",
-      desc: "Sagittis purus amet volutpat consequat mauris nunc congue nisi and tortor.",
-      price: 110,
-      disc: 27,
-      img: herobannerImage3,
-    },
+    // {
+    //   id: 1,
+    //   title: (
+    //     <>
+    //       Grab Super <span className="text__gradient">Offer</span>
+    //     </>
+    //   ),
+    //   tag: "eCommerce Solution",
+    //   desc: "Sagittis purus amet volutpat consequat mauris nunc congue nisi and tortor.",
+    //   price: 110,
+    //   disc: 27,
+    //   img: herobannerImage3,
+    // },
     {
       id: 2,
       title: (

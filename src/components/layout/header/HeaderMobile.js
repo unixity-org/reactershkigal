@@ -1,5 +1,5 @@
 import Image from "next/image";
-import logoImage1 from "@/assets/img/logo/Logo_1.png";
+import logoImage1 from "@/assets/img/logo/Logo_mobile.png";
 import Link from "next/link";
 import CartHeader from "./CartHeader";
 import ButtonPrimary from "@/components/shared/buttons/ButtonPrimary";

@@ -2,11 +2,11 @@ import BlogDetailsPrimary from "@/components/sections/blogDetails/BlogDetailsPri
 import HeroInner from "@/components/sections/hero-banners/HeroInner";
 import React from "react";
 
-const BlogDetailsMain = () => {
+const BlogDetailsMain = ({ post }) => {
   return (
     <main>
       <HeroInner title={"Blog Details"} currentItem={"Blog Details"} />
-      <BlogDetailsPrimary />
+      <BlogDetailsPrimary post={post} />
     </main>
   );
 };
