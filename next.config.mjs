@@ -21,6 +21,9 @@ const nextConfig = {
       },
     ],
   },
+  experimental: {
+    forceDynamic: true, // فعال کردن رفتار دینامیک برای کل پروژه
+  },
 };
 
 export default nextConfig;

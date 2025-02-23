@@ -5,6 +5,7 @@ import PageWrapper from "@/components/shared/wrappers/PageWrapper";
 import getAllBlogs from "@/libs/getAllBlogs";
 import { notFound } from "next/navigation";
 import { getBlogById } from "@/services/blogDetailService";
+export const dynamic = 'force-dynamic';
 export const metadata = {
   title: "Blogs Details | Bastun- Business Consulting Next Js Template",
   description: "Blogs Details | Bastun- Business Consulting Next Js Template",
